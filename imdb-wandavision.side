@@ -1,0 +1,78 @@
+{
+  "id": "e7371f93-bf1f-4f36-95fa-63fd246113c5",
+  "version": "2.0",
+  "name": "imdb-wandavision",
+  "url": "https://www.imdb.com",
+  "tests": [{
+    "id": "8b236fc3-b271-4f62-a76b-892c33661eaf",
+    "name": "imdb-wandavision",
+    "commands": [{
+      "id": "ec39b4bc-a377-449b-bb6d-e0d47e233888",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9f00385-50e1-4969-b1cf-c9df33ce4017",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "843x774",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28e8b077-6651-4e5e-9855-2dd995452028",
+      "comment": "",
+      "command": "type",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "wandavision"
+    }, {
+      "id": "df6367d7-1322-42e0-9f7b-d5a856e04143",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "9dd7773d-928b-4576-aeee-9515cee3bff0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=TRIVIA",
+      "targets": [
+        ["linkText=TRIVIA", "linkText"],
+        ["css=.quicklink:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'TRIVIA')]", "xpath:link"],
+        ["xpath=//div[@id='quicklinksMainSection']/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/title/tt9140560/trivia?ref_=tt_ql_2')]", "xpath:href"],
+        ["xpath=//div/div/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'TRIVIA')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "3638ec3d-674d-4bb0-8f57-f180fa03bc34",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8b236fc3-b271-4f62-a76b-892c33661eaf"]
+  }],
+  "urls": ["https://www.imdb.com/"],
+  "plugins": []
+}
