@@ -1,4 +1,13 @@
-const webdriver = require('selenium-webdriver');
-new webdriver.Builder()
-	.forBrowser('firefox').build()
-	.get('https://www.google.com/');
+#!/usr/bin/env node
+const {Builder,By,Key,until} = require('selenium-webdriver');
+(async function hello() {
+	let driver = await new Builder()
+		.forBrowser('firefox').build();
+	await driver.get('https://www.google.com/');
+
+	await driver.switchTo().frame(0);
+	await driver.wait(until.elementLocated(By.id("introAgreeButton"))).click();
+	
+	await driver.switchTo().defaultContent();
+	await driver.findElement(by.name('q')).sendKeys('devops',key.ENTER);
+})();
