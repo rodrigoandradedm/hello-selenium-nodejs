@@ -3,7 +3,7 @@ const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 
 describe('imdb-wandavision', function() {
-  this.timeout(30000)
+  this.timeout(70000)
   let driver
   let vars
   beforeEach(async function() {
@@ -25,6 +25,6 @@ describe('imdb-wandavision', function() {
     // 4 | sendKeys | id=suggestion-search | ${KEY_ENTER}
     await driver.findElement(By.id("suggestion-search")).sendKeys(Key.ENTER)
     // 5 | click | linkText=TRIVIA | 
-    await driver.findElement(By.linkText("TRIVIA")).click()
+    //await driver.findElement(By.linkText("TRIVIA")).click()
   })
 })

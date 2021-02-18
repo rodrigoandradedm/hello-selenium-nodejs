@@ -13,8 +13,8 @@ const {Builder,By,Key,until} = require('selenium-webdriver');
 		//console.log(await element.getText());
 		let titleElem = await q.findElement(By.className("question-hyperlink"));
 		let descElem = await q.findElement(By.className("excerpt"));
-		let titleElem = await q.findElement(By.css(".user-details a"));
+		let userElem = await q.findElement(By.css(".user-details a"));
 		
-		let descElem = await q.findElement(By.className("excerpt"));
+		let title = await titleElem-getText();
 ;	};
 })();
